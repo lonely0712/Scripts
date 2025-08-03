@@ -27,7 +27,7 @@
 
           const link = document.createElement('a');
           link.className = 'install-button';
-          link.href = `/modules/${mod.file}`;
+          link.href = `shadowrocket://install?url=https://yourdomain.com/modules/${mod.file}`;
           link.textContent = 'Install';
 
           item.appendChild(title);
