@@ -1,0 +1,5 @@
+[MITM]
+hostname = %APPEND% www.shortform.com
+
+[Script]
+Shortform=type=http-response,pattern=https://www.shortform.com/api/billing/,requires-body=1,script-path=https://raw.githubusercontent.com/lonely0712/Scripts/refs/heads/main/script-json/Shortform.js

@@ -1,5 +1,11 @@
 [
-  {"name": "shortform", "file": "modules/"}
+  {"name": "Shortform", "file": "modules/Shortform.module"},
+  {"name": "Lightroom", "file": "modules/Lightroom.module"},
+  {"name": "Picsart", "file": "modules/Picsart.module"},
+  {"name": "Smallpdf", "file": "modules/Smallpdf.module"},
+  {"name": "Soundcloud", "file": "modules/Soundcloud.module"},
+  {"name": "Youtube", "file": "modules/Youtube.module"},
+  {"name": "Alightmotion", "file": "modules/Alightmotion.module"}
 ]
 
 
