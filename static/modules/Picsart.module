@@ -1,3 +1,5 @@
+#!name=Picsart
+
 [Script]
 Picsart=type=http-response,pattern=https:\/\/api\.(picsart|meiease)\.c(n|om)\/users\/show\/me\.json,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/lonely0712/Scripts/refs/heads/main/script-json/Picsart.json
 

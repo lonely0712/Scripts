@@ -1,3 +1,5 @@
+#!name=Smallpdf
+
 [Script]
 Smallpdf=type=http-response,pattern=https://pro.smallpdf.com/pro/account,requires-body=1,script-path=https://raw.githubusercontent.com/lonely0712/Scripts/refs/heads/main/script-json/Smallpdf.js
 [MITM]

@@ -1,3 +1,5 @@
+#!name=SoundCloud
+
 [Script]
 SoundCloudGo+=type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/lonely0712/Scripts/refs/heads/main/script-json/Soundcloud.js
 [MITM]

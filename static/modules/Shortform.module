@@ -1,3 +1,5 @@
+#!name=Shortform
+
 [MITM]
 hostname = %APPEND% www.shortform.com
 
