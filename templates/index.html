@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Shadowrocket Modules</title>
-  <link rel="stylesheet" href="./static/index.css">
+  <link rel="stylesheet" href="/static/index.css">
 </head>
 <body>
   <h1>Shadowrocket Module Installer</h1>
@@ -13,7 +13,7 @@
   <div class="module-list" id="moduleList"></div>
 
   <script>
-    fetch('modules.json')
+    fetch('/static/modules.json')
       .then(res => res.json())
       .then(modules => {
         const container = document.getElementById('moduleList');
