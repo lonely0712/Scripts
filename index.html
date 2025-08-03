@@ -10,11 +10,9 @@
   <h1>Shadowrocket Module Installer</h1>
   <p>Tap below to install directly in Shadowrocket</p>
 
-  <div class="module-list" id="moduleList">
+  <div class="module-list" id="moduleList"></div>
 
-  </div>
-
-    <script>
+  <script>
     fetch('modules.json')
       .then(res => res.json())
       .then(modules => {
@@ -29,7 +27,7 @@
 
           const link = document.createElement('a');
           link.className = 'install-button';
-          link.href = mod.file;
+          link.href = `shadowrocket://module/${mod.file}`;
           link.textContent = 'Install';
 
           item.appendChild(title);
