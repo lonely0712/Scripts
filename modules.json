@@ -1,11 +1,11 @@
 [
-  {"name": "Shortform", "file": "modules/Shortform.module"},
-  {"name": "Lightroom", "file": "modules/Lightroom.module"},
-  {"name": "Picsart", "file": "modules/Picsart.module"},
-  {"name": "Smallpdf", "file": "modules/Smallpdf.module"},
-  {"name": "Soundcloud", "file": "modules/Soundcloud.module"},
-  {"name": "Youtube", "file": "modules/Youtube.module"},
-  {"name": "Alightmotion", "file": "modules/Alightmotion.module"}
+  {"name": "Shortform", "file": "Shortform.module"},
+  {"name": "Lightroom", "file": "Lightroom.module"},
+  {"name": "Picsart", "file": "Picsart.module"},
+  {"name": "Smallpdf", "file": "Smallpdf.module"},
+  {"name": "Soundcloud", "file": "Soundcloud.module"},
+  {"name": "Youtube", "file": "Youtube.module"},
+  {"name": "Alightmotion", "file": "Alightmotion.module"}
 ]
 
 
