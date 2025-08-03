@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shadowrocket Modules</title>
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./static/index.css">
 </head>
 <body>
   <h1>Shadowrocket Module Installer</h1>
@@ -27,9 +27,7 @@
 
           const link = document.createElement('a');
           link.className = 'install-button';
-          const baseURL = "https://git.adham.wuaze.com/modules/";
-          link.href = baseURL + encodeURIComponent(mod.file);
-
+          link.href = `/modules/${mod.file}`;
           link.textContent = 'Install';
 
           item.appendChild(title);
