@@ -28,7 +28,7 @@
           const link = document.createElement('a');
           link.className = 'install-button';
           const baseURL = "https://git.adham.wuaze.com/modules/";
-          link.href = `shadowrocket://${encodeURIComponent(baseURL + mod.file)}`;
+          link.href = baseURL + encodeURIComponent(mod.file);
 
           link.textContent = 'Install';
 
