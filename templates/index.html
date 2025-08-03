@@ -6,13 +6,15 @@
   <title>Shadowrocket Modules</title>
   <link rel="stylesheet" href="/static/index.css">
 </head>
-<body>
+<body data-page="sh">
   <h1>Shadowrocket Module Installer</h1>
   <p>Tap below to install directly in Shadowrocket</p>
 
   <div class="module-list" id="moduleList"></div>
 
   <script>
+    const isIOS = /iP(hone|od|ad)/i.test(navigator.userAgent);
+
     fetch('/static/modules.json')
       .then(res => res.json())
       .then(modules => {
@@ -27,9 +29,17 @@
 
           const link = document.createElement('a');
           link.className = 'install-button';
-          link.href = `shadowrocket://install?url=https://hub.adham.wuaze.com/modules/${mod.file}`;
-          link.textContent = 'Install';
+          const fileUrl = `https://hub.adham.wuaze.com/modules/${mod.file}`;
 
+          if (isIOS) {
+            link.href = `shadowrocket://install?module=${encodeURIComponent(fileUrl)}`;
+          } else {
+            link.href = fileUrl;
+            link.download = mod.file;
+            link.onclick = () => alert('Open this page in Safari on iOS with Shadowrocket installed.');
+          }
+
+          link.textContent = 'Install';
           item.appendChild(title);
           item.appendChild(link);
           container.appendChild(item);
