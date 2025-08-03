@@ -3,9 +3,9 @@
   {"name": "Lightroom", "file": "Lightroom.module"},
   {"name": "Picsart", "file": "Picsart.module"},
   {"name": "Smallpdf", "file": "Smallpdf.module"},
-  {"name": "Soundcloud", "file": "Soundcloud.module"},
+  {"name": "SoundCloud", "file": "Soundcloud.module"},
   {"name": "Youtube", "file": "Youtube.module"},
-  {"name": "Alightmotion", "file": "Alightmotion.module"}
+  {"name": "Alight Motion", "file": "Alightmotion.module"}
 ]
 
 
