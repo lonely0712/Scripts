@@ -9,7 +9,7 @@ $done({
     "change_plan_at_period_end" : false,
     "trial_end" : 1785748172,
     "current_period_amount" : 31536000,
-    "current_period_end" : 1754044736,
+    "current_period_end" : 1785748172,
     "billing_plans" : {
 
     },
