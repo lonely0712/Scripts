@@ -26,9 +26,9 @@ $done({
   "metadata" : {
     "user" : {
       "signup" : "2025-07-25T10:36:04.842731+00:00",
-      "id" : null,
+      "id" : "940dded6-96d9-468a-9377-a032d662377d",
       "is_trial" : true,
-      "email" : null,
+      "email" : "p4z6zqcdxv@privaterelay.appleid.com",
       "language" : null,
       "temporary_account_state" : null,
       "is_limited" : false,
