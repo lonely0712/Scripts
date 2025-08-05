@@ -17,7 +17,7 @@ $done({
     "user_id" : null,
     "current_period_end_datetime" : "2026-08-03T09:09:32.000000+00:00",
     "status_message" : "Subscription is active",
-    "cancel_at_period_end" : true,
+    "cancel_at_period_end" : false,
     "card_data" : null,
     "is_trial" : true,
     "billing_type" : "apple",
