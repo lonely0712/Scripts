@@ -2,10 +2,12 @@ var body = $response.body;
 var obj = JSON.parse(body);
 
 obj = {
+"request_date": "2025-09-18T20:01:14Z",
+"request_date_ms": 1758225674277,
 "subscriber": {
 "entitlements": {
 "unlimited": {
-"expires_date": "2029-09-21T19:46:33Z",
+"expires_date": "2029-09-18T19:46:35Z",
 "grace_period_expires_date": null,
 "product_identifier": "trial_yearly",
 "purchase_date": "2025-09-18T19:46:33Z"
@@ -20,17 +22,17 @@ obj = {
 "original_purchase_date": "2024-06-05T07:32:39Z",
 "other_purchases": {},
 "subscriptions": {
-"trial_yearly": {
+"yearly": {
 "auto_resume_date": null,
 "billing_issues_detected_at": null,
-"display_name": "Trial-Yearly",
-"expires_date": "2029-09-21T19:46:33Z",
+"display_name": "Yearly",
+"expires_date": "2029-09-18T19:46:35Z",
 "grace_period_expires_date": null,
 "is_sandbox": false,
 "management_url": "https://apps.apple.com/account/subscriptions",
 "original_purchase_date": "2025-09-18T19:46:35Z",
 "ownership_type": "PURCHASED",
-"period_type": "trial",
+"period_type": "normal",
 "price": {
 "amount": 0,
 "currency": "SEK"
@@ -47,3 +49,5 @@ obj = {
 
 body = JSON.stringify(obj);
 $done({body});
+
+var obj = JSON.parse($response.body);
