@@ -5,7 +5,8 @@
   {"name": "Smallpdf", "file": "Smallpdf.module"},
   {"name": "SoundCloud", "file": "Soundcloud.module"},
   {"name": "Youtube", "file": "Youtube.module"},
-  {"name": "Alight Motion", "file": "Alightmotion.module"}
+  {"name": "Alight Motion", "file": "Alightmotion.module"},
+  {"name": "Picky Ai", "file": "Picky.module"}
 ]
 
 
