@@ -50,4 +50,3 @@ obj = {
 body = JSON.stringify(obj);
 $done({body});
 
-var obj = JSON.parse($response.body);
