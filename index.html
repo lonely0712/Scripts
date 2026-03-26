@@ -4,9 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Shadowrocket Modules</title>
-  <link rel="stylesheet" href="/static/index.css" />
+
+  <link rel="stylesheet" href="index.css" />
 </head>
-<body data-page="sh">
+
+<body>
   <h1>Shadowrocket Module Installer</h1>
   <p>Tap below to install directly in Shadowrocket</p>
 
@@ -20,13 +22,19 @@
     const isIOS = /iP(hone|od|ad)/i.test(navigator.userAgent);
     let allModules = [];
 
+    function makeShadowrocketInstallUrl(rawUrl) {
+      return "shadowrocket://install?module=" + encodeURIComponent(rawUrl);
+    }
+
     function renderModules(modules) {
       const container = document.getElementById('moduleList');
       container.innerHTML = '';
+
       if (modules.length === 0) {
         container.textContent = 'No matching modules found.';
         return;
       }
+
       modules.forEach(mod => {
         const item = document.createElement('div');
         item.className = 'module-item';
@@ -37,14 +45,18 @@
 
         const link = document.createElement('a');
         link.className = 'install-button';
-        const fileUrl = `https://hub.adham.wuaze.com/modules/${mod.file}`;
+
+        const rawUrl =
+          `https://raw.githubusercontent.com/lonely0712/Scripts/main/modules/${encodeURIComponent(mod.file)}`;
 
         if (isIOS) {
-          link.href = `shadowrocket://install?module=${encodeURIComponent(fileUrl)}`;
+          link.href = makeShadowrocketInstallUrl(rawUrl);
+          link.target = "_self";
         } else {
-          link.href = fileUrl;
+          link.href = rawUrl;
           link.download = mod.file;
-          link.onclick = () => alert('Open this page in Safari on iOS with Shadowrocket installed.');
+          link.onclick = () =>
+            alert('Open this page in Safari on iOS with Shadowrocket installed.');
         }
 
         link.textContent = 'Install';
@@ -55,7 +67,7 @@
       });
     }
 
-    fetch('/static/modules.json')
+    fetch('./modules.json')
       .then(res => res.json())
       .then(modules => {
         allModules = modules;
@@ -67,7 +79,11 @@
 
     document.getElementById('searchInput').addEventListener('input', function () {
       const value = this.value.toLowerCase();
-      const filtered = allModules.filter(mod => mod.name.toLowerCase().includes(value));
+
+      const filtered = allModules.filter(mod =>
+        mod.name.toLowerCase().includes(value)
+      );
+
       renderModules(filtered);
     });
   </script>
